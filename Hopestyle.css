@@ -1,0 +1,499 @@
+/* ---------------- General ---------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --green: #2e7d32;
+  --light-green: #a5d6a7;
+  --cream: #f1f8e9;
+  --dark-green: #1b5e20;
+  --accent: #81c784;
+  --text-dark: #1b1b1b;
+  --white: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background: var(--cream);
+  color: var(--text-dark);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* ---------------- Navbar ---------------- */
+nav {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+nav.scrolled {
+  background: var(--green);
+  color: var(--white);
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--dark-green);
+  transition: color 0.3s ease;
+}
+
+nav.scrolled .logo {
+  color: var(--white);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 2rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+nav.scrolled ul li a {
+  color: var(--white);
+}
+
+nav ul li a:hover {
+  color: var(--green);
+}
+
+/* ---------------- Hero Section ---------------- */
+.hero {
+  padding-top: 8rem;
+  text-align: center;
+  background: linear-gradient(to bottom right, #e8f5e9, #f1f8e9);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  color: var(--green);
+  margin-bottom: 1rem;
+  font-weight: 800;
+  animation: fadeDown 1.5s ease forwards;
+}
+
+.hero p {
+  max-width: 700px;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #333;
+  opacity: 0;
+  animation: fadeUp 2s ease forwards 0.6s;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background: var(--green);
+  color: var(--white);
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 6px 15px rgba(46, 125, 50, 0.3);
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 2s ease forwards 1.2s;
+}
+
+.cta-button:hover {
+  background: var(--dark-green);
+  transform: scale(1.05);
+}
+
+/* ---------------- Floating Nature Elements ---------------- */
+.leaf {
+  position: fixed;
+  font-size: 1.5rem;
+  animation: floatLeaf 12s infinite ease-in-out;
+  opacity: 0.85;
+  z-index: 0;
+}
+
+.leaf:nth-child(1) { top: 10%; left: 5%; animation-delay: 0s; }
+.leaf:nth-child(2) { top: 40%; left: 15%; animation-delay: 3s; }
+.leaf:nth-child(3) { top: 60%; left: 80%; animation-delay: 6s; }
+.leaf:nth-child(4) { top: 80%; left: 30%; animation-delay: 1.5s; }
+
+@keyframes floatLeaf {
+  0%   { transform: translateY(0) rotate(0deg); opacity: 0.9; }
+  50%  { transform: translateY(-25px) rotate(10deg); opacity: 1; }
+  100% { transform: translateY(0) rotate(0deg); opacity: 0.9; }
+}
+
+/* ---------------- Impact Grid ---------------- */
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-top: 4rem;
+  width: 80%;
+  max-width: 900px;
+}
+
+.impact-card {
+  background: var(--white);
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px var(--shadow);
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s ease forwards;
+}
+
+.impact-card:nth-child(1) { animation-delay: 0.3s; }
+.impact-card:nth-child(2) { animation-delay: 0.6s; }
+.impact-card:nth-child(3) { animation-delay: 0.9s; }
+
+.impact-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px var(--shadow);
+}
+
+.impact-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.impact-number {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--green);
+}
+
+.impact-label {
+  color: #444;
+}
+
+/* ---------------- Animations ---------------- */
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeDown {
+  0% { opacity: 0; transform: translateY(-40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* ---------------- Section Titles ---------------- */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--green);
+  margin: 5rem 0 2rem;
+  position: relative;
+  animation: fadeDown 1s ease forwards;
+}
+
+.section-title::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: var(--accent);
+  display: block;
+  margin: 0.5rem auto 0;
+  border-radius: 5px;
+}
+
+/* ---------------- About Section ---------------- */
+#about {
+  background: #ffffff;
+  padding: 4rem 2rem;
+}
+
+.about-content {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #444;
+  animation: fadeUp 1.5s ease forwards;
+}
+
+.about-content p {
+  margin-bottom: 1.5rem;
+}
+
+/* ---------------- Mission Cards ---------------- */
+.mission-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+  max-width: 1000px;
+  margin-inline: auto;
+}
+
+.mission-card {
+  background: var(--cream);
+  border-left: 6px solid var(--green);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px var(--shadow);
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+}
+
+.mission-card:hover {
+  background: var(--white);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px var(--shadow);
+}
+
+.mission-card h3 {
+  color: var(--green);
+  margin-bottom: 0.8rem;
+}
+
+/* ---------------- Donation Section ---------------- */
+#donate {
+  background: linear-gradient(135deg, #dcedc8, #f1f8e9);
+  padding: 5rem 2rem;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.donate-subtext {
+  max-width: 700px;
+  margin: auto;
+  color: #333;
+  margin-bottom: 3rem;
+  animation: fadeUp 1.2s ease forwards;
+}
+
+/* ✅ Make all 4 cards appear in one horizontal row */
+.donation-options {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 1rem;
+}
+
+/* ✅ Animated Cards */
+.donation-card {
+  flex: 0 0 250px;
+  background: var(--white);
+  border: 3px solid rgba(139, 195, 74, 0.3);
+  border-radius: 15px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 10px var(--shadow);
+
+  /* animation */
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1s ease forwards;
+}
+
+/* ✨ Staggered animation for each card */
+.donation-card:nth-child(1) { animation-delay: 0.2s; }
+.donation-card:nth-child(2) { animation-delay: 0.4s; }
+.donation-card:nth-child(3) { animation-delay: 0.6s; }
+.donation-card:nth-child(4) { animation-delay: 0.8s; }
+
+.donation-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--green);
+  box-shadow: 0 10px 20px var(--shadow);
+}
+
+.donation-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.donation-amount {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--green);
+}
+
+.donation-description {
+  color: #555;
+}
+
+/* ✅ Keyframes for fade-up effect */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------------- Buttons ---------------- */
+.submit-button {
+  background: var(--green);
+  color: var(--white);
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(46, 125, 50, 0.3);
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.submit-button:hover {
+  background: var(--dark-green);
+  transform: scale(1.05);
+}
+
+/* ---------------- Contact Section ---------------- */
+#contact {
+  padding: 5rem 2rem;
+  background: var(--white);
+  text-align: center;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 3rem auto;
+  text-align: left;
+  background: var(--cream);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px var(--shadow);
+  animation: fadeUp 1.5s ease forwards;
+}
+
+.contact-subtext {
+  text-align: center;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--green);
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1.5px solid #c8e6c9;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 5px rgba(46, 125, 50, 0.3);
+}
+
+/* ---------------- Footer ---------------- */
+footer {
+  background: var(--green);
+  color: var(--white);
+  text-align: center;
+  padding: 3rem 1rem;
+  font-size: 0.95rem;
+  animation: fadeIn 2s ease forwards;
+}
+
+.footer-icons {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer-note {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  margin-top: 1rem;
+}
+
+/* ---------------- Responsive ---------------- */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  nav ul li {
+    margin: 0.8rem 0;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .impact-grid {
+    width: 90%;
+  }
+
+  .mission-grid, .donation-options {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form {
+    padding: 1.5rem;
+  }
+}

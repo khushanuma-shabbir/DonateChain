@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hope Foundation - Nurturing Lives, Growing Communities</title>
+  <link rel="stylesheet" href="Hopestyle.css">
+</head>
+
+<body>
+  <!-- Floating nature elements -->
+  <div class="leaf">🍃</div>
+  <div class="leaf">🌿</div>
+  <div class="leaf">🍀</div>
+  <div class="leaf">🌱</div>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <div class="logo">🌿 Hope Foundation</div>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#donate">Donate</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <h1>Nurturing Lives, Growing Communities</h1>
+    <p>Together, we cultivate hope and harvest positive change 🌾</p>
+    <a href="#donate" class="cta-button">Plant Seeds of Hope</a>
+
+    <div class="impact-grid">
+      <div class="impact-card">
+        <div class="impact-icon">🌳</div>
+        <div class="impact-number">10,000+</div>
+        <div class="impact-label">Lives Nurtured</div>
+      </div>
+
+      <div class="impact-card">
+        <div class="impact-icon">🌍</div>
+        <div class="impact-number">50+</div>
+        <div class="impact-label">Communities Grown</div>
+      </div>
+
+      <div class="impact-card">
+        <div class="impact-icon">🤝</div>
+        <div class="impact-number">500+</div>
+        <div class="impact-label">Green Warriors</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2 class="section-title">About Hope Foundation</h2>
+
+    <div class="about-content">
+      <p>🌱 Hope Foundation is more than an organization – we are a movement rooted in the belief that every act of kindness creates ripples of positive change. Like a seed that grows into a mighty tree, we nurture communities and help them flourish naturally.</p>
+      <p>Our philosophy mirrors nature's wisdom: sustainable growth, interconnected support, and nurturing environments where everyone can thrive. We work in harmony with communities, providing education, healthcare, and resources that create lasting, organic change.</p>
+      <p>Every contribution you make is like planting a seed. With proper care and community support, these seeds grow into forests of opportunity, gardens of hope, and ecosystems of positive transformation. Together, we're not just changing lives – we're cultivating a greener, more compassionate world.</p>
+    </div>
+
+    <div class="mission-grid">
+      <div class="mission-card">
+        <h3>🌾 Education</h3>
+        <p>Sowing knowledge, reaping futures. We provide quality education to help minds grow and flourish.</p>
+      </div>
+
+      <div class="mission-card">
+        <h3>💚 Healthcare</h3>
+        <p>Nurturing wellness naturally. Access to healthcare that helps communities bloom with vitality.</p>
+      </div>
+
+      <div class="mission-card">
+        <h3>🌍 Sustainability</h3>
+        <p>Growing green futures. Environmental stewardship and sustainable community development.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Donate Section -->
+  <section id="donate">
+    <h2 class="section-title">Plant Seeds of Change</h2>
+
+    <p class="donate-subtext">
+      🌿 Every donation is a seed that grows into a forest of possibilities. Choose how you'd like to make a difference today.
+    </p>
+
+    <div class="donation-options">
+      <div class="donation-card" onclick="selectAmount(500, event)">
+        <div class="donation-icon">🌾</div>
+        <div class="donation-amount">₹500</div>
+        <div class="donation-description">Feed a Family</div>
+      </div>
+
+      <div class="donation-card" onclick="selectAmount(1000, event)">
+        <div class="donation-icon">📚</div>
+        <div class="donation-amount">₹1000</div>
+        <div class="donation-description">Educate a Child</div>
+      </div>
+
+      <div class="donation-card" onclick="selectAmount(2000, event)">
+        <div class="donation-icon">💚</div>
+        <div class="donation-amount">₹2000</div>
+        <div class="donation-description">Medical Support</div>
+      </div>
+
+      <div class="donation-card" onclick="selectAmount(5000, event)">
+        <div class="donation-icon">🌳</div>
+        <div class="donation-amount">₹5000</div>
+        <div class="donation-description">Community Project</div>
+      </div>
+    </div>
+
+    <div class="donate-btn-container">
+      <!-- UPDATED: goes to DonationPage -->
+      <a href="DonationPage/index.html" class="submit-button">🌱 Let's Donate</a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2 class="section-title">Connect With Us</h2>
+
+    <div class="contact-form">
+      <p class="contact-subtext">
+        🌿 We'd love to hear from you. Reach out and let's grow together!
+      </p>
+
+      <div class="form-group">
+        <label>Name *</label>
+        <input type="text" required placeholder="Your name" id="contactName">
+      </div>
+
+      <div class="form-group">
+        <label>Email *</label>
+        <input type="email" required placeholder="your.email@example.com" id="contactEmail">
+      </div>
+
+      <div class="form-group">
+        <label>Subject</label>
+        <input type="text" placeholder="What's on your mind?" id="contactSubject">
+      </div>
+
+      <div class="form-group">
+        <label>Message *</label>
+        <textarea required placeholder="Share your thoughts, questions, or ideas..." id="contactMessage"></textarea>
+      </div>
+
+      <button class="submit-button" onclick="handleContact()">🌱 Send Message</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-icons">🌿 🌍 💚 🌱 🌳</div>
+    <p><strong>Hope Foundation</strong></p>
+    <p>Nurturing lives, one seed at a time</p>
+    <p>Email: grow@hopefoundation.org | Phone: +91 123 456 7890</p>
+    <p class="footer-note">© 2025 Hope Foundation. Growing hope naturally. 🌱</p>
+  </footer>
+
+  <script src="Hopescript.js"></script>
+</body>
+</html>

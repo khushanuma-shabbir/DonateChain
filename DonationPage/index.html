@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Donate — NGO</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Ethers.js CDN v6.15.0 -->
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.15.0/dist/ethers.umd.min.js"></script>
+</head>
+<body>
+  <main class="card">
+    <h1>Support our NGO</h1>
+    <p class="subtitle">Donate securely via MetaMask (Sepolia)</p>
+
+    <form id="donationForm">
+      <label>
+        Your name
+        <input id="name" type="text" required placeholder="Full name" />
+      </label>
+
+      <label>
+        Phone (with country code)
+        <input id="phone" type="tel" required placeholder="+91xxxxxxxxxx" />
+      </label>
+
+      <label>
+        Message (optional)
+        <textarea id="note" rows="3" placeholder="Message for the NGO"></textarea>
+      </label>
+
+      <label>
+        Amount (ETH)
+        <input 
+          id="amount" 
+          type="text" 
+          required 
+          placeholder="Enter any amount" 
+          pattern="^\d*\.?\d*$" 
+          title="Enter a valid number" 
+        />
+      </label>
+
+      <div class="row">
+        <button id="connectBtn" type="button">Connect MetaMask</button>
+        <button type="submit" id="payBtn">Donate via MetaMask</button>
+      </div>
+
+      <p id="status" class="status"></p>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

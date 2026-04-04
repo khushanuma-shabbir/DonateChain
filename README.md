@@ -1,11 +1,11 @@
-<h1 align="center">💙 DonateChain</h1>
+<h1 align="center"> DonateChain 💙</h1>
 
 <p align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=24&duration=3000&color=00C2FF&center=true&vCenter=true&width=500&lines=Transparent+Donations;Blockchain+for+Good;No+Middlemen;Real+Impact+%F0%9F%92%99" />
 </p>
 
 <p align="center">
-  <img src="image/1.png" width="500" style="border-radius: 20px;" />
+  <img src="image/7.jpg" width="400" style="border-radius: 20px;" />
 </p>
 
 ---

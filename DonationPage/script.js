@@ -178,7 +178,7 @@ ${receipt.hash}
  
     // ✅ WhatsApp notification (auto-open)
 
-    const whatsappNumber = "919373048440"; // include country code, no '+'
+    const whatsappNumber = "9193********"; // include country code put your mobile number here, no '+'
 
     const whatsappMsg = encodeURIComponent(
 

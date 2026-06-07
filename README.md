@@ -334,15 +334,18 @@ Through this project, I gained practical experience in:
 
 ---
 
-## 👩‍💻 Author
+## 👩‍💻 Developer
 
-**Khushanuma Shabbir Mansuri**
+**Khushanuma Shabbir Mansuri**  
+*B.Tech Information Technology Student*
 
-B.Tech Information Technology Student
+| Contact | Link |
+|----------|------|
+| 📧 Email | khushanuma.shabbir@gmail.com |
+| 💼 LinkedIn | https://www.linkedin.com/in/khushanuma-mansuri |
+| 🐙 GitHub | https://github.com/khushanuma-shabbir |
 
-Email: [khushanuma.shabbir@gmail.com](mailto:khushanuma.shabbir@gmail.com)
 
-LinkedIn: https://www.linkedin.com/in/khushanuma-mansuri-7b0789292/
 
 ---
 

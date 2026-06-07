@@ -1,4 +1,9 @@
-node_modules
-DonationPage/node_modules
+node_modules/
+
 .env
+DonationPage/.env
+
+.wwebjs_auth/
+DonationPage/.wwebjs_auth/
+
 .DS_Store

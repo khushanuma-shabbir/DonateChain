@@ -4,7 +4,7 @@ const RECIPIENT_ADDRESS = "0x1694a749B981D50a902AF1aFC260841E5DBe7B0f".toLowerCa
  
 // ✅ Backend endpoint
 
-const BACKEND_NOTIFY = "http://localhost:3000/notify";
+const BACKEND_NOTIFY = "https://donatechain.onrender.com/notify";
  
 // ✅ DOM elements
 

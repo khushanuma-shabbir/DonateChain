@@ -1,6 +1,6 @@
 // ✅ Fixed recipient (NGO wallet address)
 
-const RECIPIENT_ADDRESS = "0x1694a749B981D50a902AF1aFC260841E5DBe7B0f".toLowerCase();
+const RECIPIENT_ADDRESS ="0xf766Fe7Fa3E3D62ed20B338d2fc132381dB205aC".toLowerCase();
  
 // ✅ Backend endpoint
 

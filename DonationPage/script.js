@@ -134,17 +134,19 @@ document.getElementById("donationForm").addEventListener("submit", async (e) => 
  
     // ✅ Success message
 
-    const message = `
+const message = `
 
 ✅ Donation Successful!
- 
+
 👤 Name: ${name}
 
 📱 Phone: ${phone}
 
 💬 Message: ${note || "N/A"}
 
-💰 Amount: ${amount} ETH
+💰 Donation Entered: ${amount}
+
+⛓️ Sent On-Chain: ${scaledAmount} ETH
 
 🔗 Transaction Hash:
 
@@ -174,17 +176,17 @@ ${receipt.hash}
 
     if (!res.ok) throw new Error((json && json.error) || `Notify failed (${res.status})`);
  
-    setStatus(`✅ NGO notified successfully!\nTx: ${receipt.hash}`);
+    setStatus(`${message}\n\n✅ NGO notified successfully!`);
  
     // ✅ WhatsApp notification (auto-open)
 
-    const whatsappNumber = "9193********"; // include country code put your mobile number here, no '+'
+    const whatsappNumber = "919753124680"; // include country code put your mobile number here, no '+'
 
-    const whatsappMsg = encodeURIComponent(
+   const whatsappMsg = encodeURIComponent(
 
-      `🎉 *New Donation!*\n\n👤 Name: ${name}\n📱 Phone: ${phone}\n💬 Message: ${note || "N/A"}\n💰 Amount: ${amount} ETH`
+  `🎉 *New Donation!*\n\n👤 Name: ${name}\n📱 Phone: ${phone}\n💬 Message: ${note || "N/A"}\n💰 Donation Entered: ${amount}\n⛓️ Sent On-Chain: ${scaledAmount} ETH\n🔗 Tx Hash: ${receipt.hash}`
 
-    );
+);
 
     const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMsg}`;
 

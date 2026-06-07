@@ -98,7 +98,7 @@ Donation information is maintained in MongoDB for future reference and tracking.
 
 ### Step 6: NGO Communication
 
-NGOs can communicate directly with donors using integrated WhatsApp functionality.
+NGOs can receive donation notifications and communicate with donors through WhatsApp integration.
 
 ### Step 7: Impact Verification
 
@@ -138,6 +138,57 @@ Donors receive updates and proof regarding how their contributions created impac
 <p align="center">
   <img src="image/6.png" width="800"/>
 </p>
+
+---
+## 🔑 Prerequisites
+
+Before running DonateChain, ensure the following requirements are met:
+
+### 1. MetaMask Wallet
+
+* Install the MetaMask browser extension.
+* Create a new wallet or import an existing one.
+
+### 2. Ethereum Sepolia Testnet
+
+* Switch MetaMask to the **Sepolia Test Network**.
+* DonateChain is currently configured to operate on Sepolia for testing and demonstration purposes.
+
+### 3. Sepolia Test ETH
+
+* The donor wallet must contain Sepolia test ETH.
+* Test ETH can be obtained from public Sepolia faucets.
+
+### 4. Internet Connection
+
+* Required for blockchain transactions, backend communication, and database connectivity.
+
+---
+
+## ⚠️ Important Notice
+
+This project uses the **Ethereum Sepolia Testnet** and **MetaMask Wallet Integration**.
+
+For the donation workflow to function correctly:
+
+* MetaMask must be installed and connected.
+* MetaMask must be switched to the Sepolia Testnet.
+* The donor wallet must have sufficient Sepolia test ETH to cover transaction costs.
+* Transactions will not work on Ethereum Mainnet or other networks unless the application is reconfigured.
+
+Without these prerequisites, blockchain donations cannot be completed successfully.
+
+---
+
+## 🌐 Live Demo
+
+Frontend (Vercel):
+https://donatechain-bt.vercel.app/
+
+Backend API (Render):
+https://donatechain.onrender.com/
+
+> Note: Render free-tier services may take a few seconds to wake up after inactivity.
 
 ---
 

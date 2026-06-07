@@ -1,5 +1,4 @@
 <h1 align="center">DonateChain 💙</h1>
-
 <p align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=24&duration=3000&color=00C2FF&center=true&vCenter=true&width=500&lines=Transparent+Donations;Blockchain+for+Good;No+Middlemen;Real+Impact+💙" />
 </p>
@@ -7,6 +6,7 @@
 <p align="center">
   <img src="image/7.jpg" width="400" />
 </p>
+⚠️ This project requires MetaMask and the Ethereum Sepolia Testnet for full functionality.
 
 ---
 
